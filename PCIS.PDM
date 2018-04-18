@@ -1,0 +1,192 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\S M Assad\Desktop\pcis\Install-PCIS
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+PCMS.bak=
+2=
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINDOWS\system32\msscript.ocx=
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+C:\Program Files\Common Files\Microsoft Shared\INK\INKOBJ.DLL=
+C:\Program Files\TCMS\MSFLXGRD.OCX=
+C:\Program Files\Common Files\Designer\MSDE.DLL=
+C:\Program Files\Common Files\System\ado\msadomd.dll=
+C:\Program Files\TCMS\MSCOMCT2.OCX=
+C:\WINDOWS\msagent\agentsvr.exe=
+C:\WINDOWS\system32\sndrec32.exe=
+C:\WINDOWS\msagent\agentctl.dll=
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=
+C:\WINDOWS\system32\msde.dll=
+C:\WINDOWS\system32\msadomd.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\mscomct2.ocx=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+C:\WINDOWS\system32\Msinet.ocx=
+C:\WINDOWS\system32\Comct332.Ocx=
+C:\WINDOWS\system32\tabctl32.ocx=
+C:\WINDOWS\system32\comctl32.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\MsBind.DLL=
+C:\WINDOWS\system32\Msstdfmt.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\Program Files\Common Files\System\ado\msado25.tlb=Yes
+C:\WINDOWS\system32\msscript.ocx=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\MsBind.DLL=Yes
+C:\Program Files\Common Files\System\ado\msador15.dll=Yes
+C:\WINDOWS\system32\Comct332.Ocx=Yes
+C:\WINDOWS\system32\Msinet.ocx=Yes
+C:\WINDOWS\system32\msadomd.dll=Yes
+C:\WINDOWS\system32\msde.dll=Yes
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=Yes
+C:\WINDOWS\msagent\agentctl.dll=Yes
+C:\WINDOWS\system32\sndrec32.exe=Yes
+C:\WINDOWS\msagent\agentsvr.exe=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\Documents and Settings\S M Assad\Desktop\pcis\PCIS.exe=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Documents and Settings\SM.Assad\Desktop\18-may\PCMS.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINDOWS\system32\msscript.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\mscomct2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\SM.Assad\Desktop\18-may\DB\PCMS.bak=$(AppPath)
+C:\Documents and Settings\SM.Assad\Desktop\31-may\PCMS.exe=$(AppPath)
+C:\Documents and Settings\SM.Assad\Desktop\31-may\PCMS.bak=$(AppPath)
+C:\Documents and Settings\SM.Assad\Desktop\12-jun\PCMS.exe=$(AppPath)
+C:\Documents and Settings\SM.Assad\Desktop\12-jun\PCMS.bak=$(AppPath)
+C:\Documents and Settings\SM.Assad\Desktop\pcms-10-march\PCIS.exe=$(AppPath)
+C:\Program Files\Common Files\System\ado\msadomd.dll=$(WinSysPath)
+C:\WINDOWS\system32\MsBind.DLL=$(WinSysPath)
+C:\Program Files\Common Files\Designer\MSDE.DLL=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msador15.dll=$(CommonFilesSys)\ADO
+C:\Program Files\TCMS\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\Comct332.Ocx=$(WinSysPath)
+C:\WINDOWS\system32\Msinet.ocx=$(WinSysPath)
+C:\Program Files\Common Files\Microsoft Shared\INK\INKOBJ.DLL=$(WinSysPath)
+C:\Documents and Settings\SM.Assad\Desktop\pcms-10-march\PCMS.bak=$(AppPath)
+C:\Documents and Settings\Owner\Desktop\PCIS-APR-15\PCIS.exe=$(AppPath)
+C:\Program Files\TCMS\MSCOMCT2.OCX=$(WinSysPath)
+C:\Documents and Settings\Owner\Desktop\PCIS-APR-15\PCMS.bak=$(AppPath)
+C:\Documents and Settings\S M Assad\Desktop\pcis\source\PCIS-Feb.exe=$(AppPath)
+C:\WINDOWS\system32\msadomd.dll=$(WinSysPath)
+C:\WINDOWS\system32\msde.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\msagent\agentctl.dll=$(WinSysPath)
+C:\WINDOWS\system32\sndrec32.exe=$(AppPath)
+C:\WINDOWS\msagent\agentsvr.exe=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\Documents and Settings\S M Assad\Desktop\pcis\PCIS-Feb.exe=$(AppPath)
+C:\Documents and Settings\S M Assad\Desktop\pcis\PCIS.exe=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\SM.Assad\Desktop\18-may\PCMS.exe=Yes
+C:\Documents and Settings\SM.Assad\Desktop\18-may\DB\PCMS.bak=Yes
+C:\Documents and Settings\SM.Assad\Desktop\31-may\PCMS.exe=Yes
+C:\Documents and Settings\SM.Assad\Desktop\31-may\PCMS.bak=Yes
+C:\Documents and Settings\SM.Assad\Desktop\12-jun\PCMS.exe=Yes
+C:\Documents and Settings\SM.Assad\Desktop\12-jun\PCMS.bak=Yes
+C:\Documents and Settings\SM.Assad\Desktop\pcms-10-march\PCIS.exe=Yes
+C:\Documents and Settings\SM.Assad\Desktop\pcms-10-march\PCMS.bak=Yes
+C:\Documents and Settings\Owner\Desktop\PCIS-APR-15\PCIS.exe=Yes
+C:\Documents and Settings\Owner\Desktop\PCIS-APR-15\PCMS.bak=Yes
+C:\Documents and Settings\S M Assad\Desktop\pcis\source\PCIS-Feb.exe=Yes
+C:\Program Files\Microsoft Office\Office10\EXCEL.EXE=Yes
+C:\WINDOWS\system32\sndrec32.exe=Yes
+C:\Documents and Settings\S M Assad\Desktop\pcis\PCIS-Feb.exe=Yes
+C:\Documents and Settings\S M Assad\Desktop\pcis\PCIS.exe=Yes
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=PCIS
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=costtracking
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|costtracking]
+Icon1=PCMS.exe
+Title1=costtracking
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Documents and Settings\S M Assad\Desktop\pcis\Install-PCIS
+ProjectFolder=C:\Documents and Settings\S M Assad\Desktop\pcis\source
+ServerSideCab=
+File1=C:\Documents and Settings\S M Assad\Desktop\pcis\Install-PCIS\setup.exe
+File2=C:\Documents and Settings\S M Assad\Desktop\pcis\Install-PCIS\Setup.Lst
+File3=C:\Documents and Settings\S M Assad\Desktop\pcis\Install-PCIS\PCIS.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

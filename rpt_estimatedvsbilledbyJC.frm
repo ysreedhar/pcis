@@ -1,0 +1,1108 @@
+VERSION 5.00
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
+Object = "{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0"; "SHDOCVW.dll"
+Begin VB.Form rpt_estimatedvsbilledbyJC 
+   BackColor       =   &H00DC7E5A&
+   Caption         =   "Estimated vs Billed by Jobcharge"
+   ClientHeight    =   10515
+   ClientLeft      =   60
+   ClientTop       =   450
+   ClientWidth     =   12045
+   LinkTopic       =   "Form2"
+   MDIChild        =   -1  'True
+   ScaleHeight     =   10515
+   ScaleWidth      =   12045
+   WindowState     =   2  'Maximized
+   Begin VB.CheckBox chkSaveAsExcel 
+      BackColor       =   &H00FFC0C0&
+      Caption         =   "Save Report as Excel"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   5280
+      TabIndex        =   13
+      Top             =   1680
+      Width           =   1935
+   End
+   Begin VB.Frame frmExportToExcel 
+      BackColor       =   &H80000009&
+      Caption         =   "Export as Excel"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2055
+      Left            =   3720
+      TabIndex        =   9
+      Top             =   4320
+      Visible         =   0   'False
+      Width           =   5175
+      Begin VB.CommandButton cmd_apply 
+         Height          =   615
+         Left            =   3480
+         Picture         =   "rpt_estimatedvsbilledbyJC.frx":0000
+         Style           =   1  'Graphical
+         TabIndex        =   11
+         Top             =   840
+         Width           =   735
+      End
+      Begin VB.TextBox txt_name 
+         Appearance      =   0  'Flat
+         Height          =   285
+         Left            =   840
+         TabIndex        =   10
+         Top             =   960
+         Width           =   2415
+      End
+      Begin MSComctlLib.ImageList ImageList51 
+         Left            =   120
+         Top             =   240
+         _ExtentX        =   1005
+         _ExtentY        =   1005
+         BackColor       =   -2147483643
+         ImageWidth      =   32
+         ImageHeight     =   32
+         MaskColor       =   12632256
+         _Version        =   393216
+         BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+            NumListImages   =   39
+            BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":0612
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":1364
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":167E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":1AD0
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":1DEA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2104
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":241E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2738
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2A52
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2EA4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":32F6
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":3610
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":392A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":3C44
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":18DB6
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":1F050
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":252EA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":25604
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2575E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":25A78
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":25ECA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":261E4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":264FE
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":26950
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":26C6A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":270BC
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":27516
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":27830
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":27B4A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":27E64
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2817E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":28498
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":288EA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":28D3C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":29056
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":29370
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":2968A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":299A4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "rpt_estimatedvsbilledbyJC.frx":29DF6
+               Key             =   ""
+            EndProperty
+         EndProperty
+      End
+      Begin VB.Label Label1 
+         BackColor       =   &H00FFC0C0&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Report Name"
+         Height          =   255
+         Left            =   840
+         TabIndex        =   12
+         Top             =   720
+         Width           =   1095
+      End
+   End
+   Begin VB.Frame Frame1 
+      BackColor       =   &H00DC7E5A&
+      BorderStyle     =   0  'None
+      Height          =   1560
+      Left            =   0
+      TabIndex        =   2
+      Top             =   0
+      Width           =   11655
+      Begin VB.Frame Frame2 
+         BackColor       =   &H00FFC0C0&
+         Height          =   1935
+         Left            =   0
+         TabIndex        =   6
+         Top             =   0
+         Width           =   13815
+         Begin VB.Frame Frame3 
+            BackColor       =   &H00DC7E5A&
+            BorderStyle     =   0  'None
+            Height          =   1560
+            Left            =   0
+            TabIndex        =   14
+            Top             =   0
+            Width           =   11655
+            Begin VB.ListBox List2 
+               Appearance      =   0  'Flat
+               BackColor       =   &H00C0E0FF&
+               Height          =   705
+               Left            =   1320
+               Style           =   1  'Checkbox
+               TabIndex        =   23
+               Top             =   720
+               Width           =   4215
+            End
+            Begin VB.Frame Frame6 
+               BackColor       =   &H00FFC0C0&
+               BorderStyle     =   0  'None
+               Height          =   495
+               Left            =   5760
+               TabIndex        =   20
+               Top             =   960
+               Width           =   1040
+               Begin VB.OptionButton Option4 
+                  BackColor       =   &H00FFC0C0&
+                  Caption         =   "Select All"
+                  Height          =   255
+                  Left            =   0
+                  TabIndex        =   22
+                  Top             =   0
+                  Width           =   975
+               End
+               Begin VB.OptionButton Option3 
+                  BackColor       =   &H00FFC0C0&
+                  Caption         =   "Random"
+                  Height          =   255
+                  Left            =   0
+                  TabIndex        =   21
+                  Top             =   240
+                  Value           =   -1  'True
+                  Width           =   975
+               End
+            End
+            Begin VB.ComboBox cbo_proj 
+               Height          =   315
+               Left            =   1320
+               TabIndex        =   19
+               Top             =   240
+               Width           =   4095
+            End
+            Begin VB.ListBox List1 
+               Appearance      =   0  'Flat
+               BackColor       =   &H00C0E0FF&
+               Height          =   1155
+               Left            =   6810
+               Style           =   1  'Checkbox
+               TabIndex        =   18
+               Top             =   240
+               Width           =   4290
+            End
+            Begin VB.Frame Frame5 
+               BackColor       =   &H00FFC0C0&
+               BorderStyle     =   0  'None
+               Height          =   495
+               Left            =   120
+               TabIndex        =   15
+               Top             =   960
+               Width           =   1200
+               Begin VB.OptionButton Option2 
+                  BackColor       =   &H00FFC0C0&
+                  Caption         =   "Random"
+                  Height          =   255
+                  Left            =   120
+                  TabIndex        =   17
+                  Top             =   240
+                  Value           =   -1  'True
+                  Width           =   1095
+               End
+               Begin VB.OptionButton Option1 
+                  BackColor       =   &H00FFC0C0&
+                  Caption         =   "Select All"
+                  Height          =   255
+                  Left            =   120
+                  TabIndex        =   16
+                  Top             =   0
+                  Width           =   1215
+               End
+            End
+            Begin VB.Label Label4 
+               AutoSize        =   -1  'True
+               BackColor       =   &H00FFC0C0&
+               BackStyle       =   0  'Transparent
+               Caption         =   "JobNo."
+               BeginProperty Font 
+                  Name            =   "Arial"
+                  Size            =   9
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H8000000E&
+               Height          =   225
+               Left            =   600
+               TabIndex        =   26
+               Top             =   720
+               Width           =   585
+            End
+            Begin VB.Label Label3 
+               AutoSize        =   -1  'True
+               BackColor       =   &H00FFC0C0&
+               BackStyle       =   0  'Transparent
+               Caption         =   "JobCharge"
+               BeginProperty Font 
+                  Name            =   "Arial"
+                  Size            =   9
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H8000000E&
+               Height          =   225
+               Left            =   5880
+               TabIndex        =   25
+               Top             =   720
+               Width           =   930
+            End
+            Begin VB.Shape Shape6 
+               BorderColor     =   &H00FFC0C0&
+               BorderWidth     =   8
+               Height          =   1335
+               Left            =   5745
+               Top             =   120
+               Width           =   5415
+            End
+            Begin VB.Label Label2 
+               AutoSize        =   -1  'True
+               BackColor       =   &H00FFC0C0&
+               BackStyle       =   0  'Transparent
+               Caption         =   "Project key"
+               BeginProperty Font 
+                  Name            =   "Arial"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H8000000E&
+               Height          =   240
+               Left            =   150
+               TabIndex        =   24
+               Top             =   240
+               Width           =   1185
+            End
+            Begin VB.Shape Shape5 
+               BorderColor     =   &H00FFC0C0&
+               BorderWidth     =   8
+               Height          =   1335
+               Left            =   75
+               Top             =   120
+               Width           =   5535
+            End
+         End
+         Begin VB.CommandButton command2 
+            BackColor       =   &H00DC7E5A&
+            Height          =   480
+            Left            =   12480
+            Picture         =   "rpt_estimatedvsbilledbyJC.frx":2A588
+            Style           =   1  'Graphical
+            TabIndex        =   8
+            ToolTipText     =   "Click to View"
+            Top             =   120
+            Width           =   735
+         End
+         Begin VB.CommandButton Command1 
+            BackColor       =   &H00DC7E5A&
+            Height          =   480
+            Left            =   12480
+            Picture         =   "rpt_estimatedvsbilledbyJC.frx":2ABA3
+            Style           =   1  'Graphical
+            TabIndex        =   7
+            ToolTipText     =   "Click to Exit"
+            Top             =   1320
+            Width           =   735
+         End
+      End
+      Begin VB.Shape Shape2 
+         BorderColor     =   &H00FFC0C0&
+         BorderWidth     =   8
+         Height          =   1335
+         Left            =   5640
+         Top             =   120
+         Width           =   5415
+      End
+      Begin VB.Shape Shape1 
+         BorderColor     =   &H00FFC0C0&
+         BorderWidth     =   8
+         Height          =   1335
+         Left            =   75
+         Top             =   120
+         Width           =   5415
+      End
+   End
+   Begin VB.Frame Frame4 
+      BackColor       =   &H00FFC0C0&
+      BorderStyle     =   0  'None
+      Height          =   615
+      Left            =   0
+      TabIndex        =   1
+      Top             =   1560
+      Width           =   11655
+      Begin VB.CommandButton cmd_close 
+         BackColor       =   &H00DC7E5A&
+         Height          =   480
+         Left            =   9240
+         Picture         =   "rpt_estimatedvsbilledbyJC.frx":2B1A2
+         Style           =   1  'Graphical
+         TabIndex        =   5
+         ToolTipText     =   "Click to Exit"
+         Top             =   80
+         Width           =   735
+      End
+      Begin VB.CommandButton cmd_show 
+         BackColor       =   &H00DC7E5A&
+         Height          =   480
+         Left            =   7560
+         Picture         =   "rpt_estimatedvsbilledbyJC.frx":2B7A1
+         Style           =   1  'Graphical
+         TabIndex        =   4
+         ToolTipText     =   "Click to View"
+         Top             =   80
+         Width           =   735
+      End
+      Begin VB.CommandButton cmd_print 
+         BackColor       =   &H00DC7E5A&
+         Height          =   480
+         Left            =   8400
+         Picture         =   "rpt_estimatedvsbilledbyJC.frx":2BDBC
+         Style           =   1  'Graphical
+         TabIndex        =   3
+         ToolTipText     =   "Click to Print"
+         Top             =   80
+         Width           =   735
+      End
+      Begin MSComCtl2.DTPicker DTPicker1 
+         Height          =   375
+         Left            =   720
+         TabIndex        =   0
+         Top             =   120
+         Visible         =   0   'False
+         Width           =   1935
+         _ExtentX        =   3413
+         _ExtentY        =   661
+         _Version        =   393216
+         CustomFormat    =   "dd-MM-yyyy H:mm:ss"
+         Format          =   16449539
+         CurrentDate     =   38099
+      End
+      Begin VB.Shape Shape4 
+         BorderColor     =   &H00FFC0C0&
+         BorderWidth     =   8
+         Height          =   1335
+         Left            =   0
+         Top             =   0
+         Width           =   5415
+      End
+      Begin VB.Shape Shape3 
+         BorderColor     =   &H00FFC0C0&
+         BorderWidth     =   8
+         Height          =   1335
+         Left            =   5565
+         Top             =   0
+         Width           =   5415
+      End
+   End
+   Begin SHDocVwCtl.WebBrowser WebBrowser 
+      Height          =   6375
+      Left            =   120
+      TabIndex        =   27
+      Top             =   2400
+      Width           =   10575
+      ExtentX         =   18653
+      ExtentY         =   11245
+      ViewMode        =   0
+      Offline         =   0
+      Silent          =   0
+      RegisterAsBrowser=   0
+      RegisterAsDropTarget=   1
+      AutoArrange     =   0   'False
+      NoClientEdge    =   0   'False
+      AlignLeft       =   0   'False
+      NoWebView       =   0   'False
+      HideFileNames   =   0   'False
+      SingleClick     =   0   'False
+      SingleSelection =   0   'False
+      NoFolders       =   0   'False
+      Transparent     =   0   'False
+      ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
+      Location        =   ""
+   End
+End
+Attribute VB_Name = "rpt_estimatedvsbilledbyJC"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+ Dim rg As New ADODB.Recordset
+ Dim hgg As Integer
+Private Sub cbo_proj_Click()
+spp = Split(cbo_proj.Text, "  -  ", Len(cbo_proj.Text), vbTextCompare)
+List2.Clear
+List1.Clear
+Dim lst As String
+Dim rs1 As New ADODB.Recordset
+If rs1.State Then rs1.Close
+rs1.Open "select DISTINCT(jobno_code),jobno_desc from jobno where job_key='" & spp(0) & "' order by jobno_code", Cn, 3, 2
+While Not rs1.EOF
+List2.AddItem rs1(0) & "  -  " & rs1(1)
+rs1.MoveNext
+Wend
+rs1.Close
+ 
+'Check1.Value = 1
+'Check2.Value = 1
+'Check3.Value = 1
+
+
+                hgg = 0
+                For hgg = 0 To List2.ListCount - 1
+                List2.Selected(hgg) = False
+                Next hgg
+                hgg = 0
+                For hgg = 0 To List1.ListCount - 1
+                List1.Selected(hgg) = False
+                Next hgg
+                Option1.Value = 0
+                Option2.Value = 0
+                Option3.Value = 0
+                Option4.Value = 0
+End Sub
+ Public Sub RPTHEADING_Standard(fs As Object)
+fs.WriteLine "    <table border=1 class=TableFont cellspacing=0 BORDERCOLOR=gray width=95%>"
+fs.WriteLine "            <td colspan=3>" & GetCompanyName & "</td>"
+fs.WriteLine "           <td><b>Project Key</td>"
+fs.WriteLine "           <td><b>" & cbo_proj.Text & "</b></td>"
+fs.WriteLine "           <td align=center>&nbsp;</td>"
+fs.WriteLine "        </tr>"
+fs.WriteLine "        <tr bgcolor=white  height=25 class=TableFont>"
+fs.WriteLine "            <td Colspan=3>ESTIMATED vs BILLED BY RESOURCE</td>"
+fs.WriteLine "           <td >&nbsp;</td>"
+fs.WriteLine "           <td><b>Cut-OffDate</td>"
+fs.WriteLine "           <td align=center>" & main.DTPcutdate1.Value & "</td>"
+fs.WriteLine "        </tr>"
+                fs.WriteLine "        <tr bgcolor=black  height=20 class=TableFont>"
+                fs.WriteLine "           <td colspan=5><font color=white><b>PrintDate</td>"
+                fs.WriteLine "           <td colspan=4><font color=white>" & Format(Date, "dd/MM/yyyy") & "</td>"
+                fs.WriteLine "        </tr>"
+                fs.WriteLine "        <tr bgcolor=black  height=15 class=TableFont>"
+                fs.WriteLine "            <td nowrap><font color=white>Resource Code</td>"
+                fs.WriteLine "            <td nowrap><font color=white>Resource Name</td>"
+                fs.WriteLine "            <td nowrap><font color=white>JobCharge</td>"
+                fs.WriteLine "            <td nowrap><font color=white>Cost Code</td>"
+                fs.WriteLine "            <td nowrap><font color=white>Billed</td>"
+                fs.WriteLine "            <td nowrap><font color=white>Estimated</td>"
+                fs.WriteLine "        </tr>"
+End Sub
+Function WriteByResource(boolSaveAsExcel As Boolean)
+Dim fso As New FileSystemObject
+   Dim fs As Object
+   Dim decDuration As Double, decTotal, decGrandTotal
+   'Set fs = fso.CreateTextFile(App.Path & "\rep.html")
+If boolSaveAsExcel = True Then
+Set fs = fso.CreateTextFile("C:\PCIS-Reports\" & filpat, True)
+Else
+Set fs = fso.CreateTextFile(App.Path & "\rep.html")
+End If
+   fs.WriteLine " <html> "
+   fs.WriteLine "<style>"
+   fs.WriteLine "    BODY INPUT"
+   fs.WriteLine "    {"
+   fs.WriteLine "      BACKGROUND-IMAGE: url(file://C:\WINNT\FeatherTexture.bmp);"
+   fs.WriteLine "    }"
+   fs.WriteLine "    .TableFont"
+   fs.WriteLine "    {"
+   fs.WriteLine "        COLOR: Black;"
+   fs.WriteLine "        FONT-FAMILY: Arial Narrow;"
+   fs.WriteLine "        FONT-SIZE: 8pt;"
+   fs.WriteLine "        TEXT-TRANSFORM: capitalize;"
+   fs.WriteLine "        CURSOR:HAND;"
+   fs.WriteLine "    }"
+   fs.WriteLine "    .TrFont"
+   fs.WriteLine "    {"
+   fs.WriteLine "        COLOR: black;"
+   fs.WriteLine "        FONT-FAMILY: Arial Narrow;"
+   fs.WriteLine "        FONT-SIZE: 8pt;"
+   fs.WriteLine "        TEXT-TRANSFORM: capitalize;"
+   fs.WriteLine "        CURSOR:HAND;"
+   fs.WriteLine "   }"
+   fs.WriteLine "</style>"
+   fs.WriteLine ("<Style type=text/css>P {page-break-before:always}</Style>")
+   fs.WriteLine "<body scroll=auto>"
+   fs.WriteLine "    <center>"
+        Dim cnt As Integer
+        RPTHEADING_Standard fs
+        cnt = 0
+For l = 0 To List1.ListCount - 1
+    If List1.Selected(l) = True Then
+    nm = Split(List1.List(l), "  -  ", Len(List1.List(l)), vbTextCompare)
+    nn = Split(cbo_proj.Text, "  -  ", Len(cbo_proj.Text), vbTextCompare)
+    Dim yre As String
+    Dim fl As New ADODB.Recordset
+    If fl.State Then fl.Close
+    fl.Open "select DISTINCT(bd_resccode) from cost  where bd_jobcharge='" & nm(0) & "' and bd_projectkey ='" & nn(0) & "' and bd_costtype='X' ", Cn, 3, 2
+    While Not fl.EOF
+    yre = fl(0)
+    Dim fldata As New ADODB.Recordset
+    If fldata.State Then fldata.Close
+    Dim fldata1 As New ADODB.Recordset
+    If fldata1.State Then fldata1.Close
+    Dim fldata2 As New ADODB.Recordset
+    If fldata2.State Then fldata2.Close
+    Dim jc As New ADODB.Recordset
+    If jc.State Then jc.Close
+    Dim spr As New ADODB.Recordset
+    If spr.State Then spr.Close
+    Dim cs As New ADODB.Recordset
+    If cs.State Then cs.Close
+    fldata.Open "select sum(bd_extdamt) from cost where bd_jobcharge='" & nm(0) & "'   and bd_projectkey ='" & nn(0) & "' and bd_resccode='" & yre & "' and bd_costtype = 'X' group by bd_resccode, bd_rescname, bd_costtype", Cn, 3, 2
+    If Not fldata.EOF Then
+        If CDbl(fldata(0)) > 0 Then
+        fldata1.Open "select bd_resccode, bd_rescname,bd_costtype, sum(bd_extdamt) as cost, bd_costcode, bd_jobcharge from cost  where bd_jobcharge='" & nm(0) & "'   and bd_projectkey ='" & nn(0) & "' and bd_resccode='" & yre & "' and  bd_costtype = 'X' group by bd_resccode, bd_rescname, bd_costtype, bd_costcode, bd_jobcharge", Cn, 3, 2
+        fldata2.Open "select sum(bd_extdamt) from cost  where bd_jobcharge='" & nm(0) & "'   and bd_projectkey ='" & nn(0) & "' and bd_resccode='" & yre & "' and bd_costtype = 'E' group by bd_resccode, bd_rescname, bd_costtype", Cn, 3, 2
+            While Not fldata1.EOF
+            cnt = cnt + 1 '********************************
+                If cnt >= 53 Then
+                fs.WriteLine "</table><P></P>"
+                RPTHEADING_Standard fs
+                cnt = 0
+                End If
+            fs.WriteLine "        <tr bgcolor=white height=15 class=TableFont>"
+            fs.WriteLine "            <td nowrap>" & fldata1!bd_resccode & "</td>"
+            fs.WriteLine "            <td nowrap>" & fldata1!bd_rescname & "</td>"
+            fs.WriteLine "            <td nowrap>" & fldata1!bd_JobCharge & "</td>"
+            fs.WriteLine "            <td nowrap>" & fldata1!bd_costcode & "</td>"
+            fs.WriteLine "            <td nowrap ALIGN=RIGHT>" & Format(fldata1!cost, "###,###,##0.00") & "</td>"
+            If Not fldata2.EOF Then
+            fs.WriteLine "            <td nowrap ALIGN=RIGHT>" & Format(IIf(IsNull(fldata2(0)), 0, fldata2(0)), "###,###,##0.00") & "</td>"
+            estimatedTotal = estimatedTotal + (IIf(IsNull(fldata2(0)), 0, fldata2(0)))
+            Else
+            fs.WriteLine "            <td nowrap ALIGN=RIGHT>0</td>"
+            estimatedTotal = estimatedTotal + 0
+            End If
+            fs.WriteLine "        </tr>"
+            billedtotal = billedtotal + fldata1!cost
+            fldata1.MoveNext
+            Wend
+        End If
+'''Next j
+    End If
+    fl.MoveNext
+    Wend
+End If
+Next l
+   fs.WriteLine "  <tr bgcolor=black class=TableFont>"
+   fs.WriteLine " <td colspan=5 ALIGN=RIGHT><font color=white><b>BILLED TOTAL - " & Format(billedtotal, "###,###,##0.00") & "</td>"
+   fs.WriteLine " <td ALIGN=RIGHT><font color=white><b>ESTIMATED TOTAL - " & Format(estimatedTotal, "###,###,##0.00") & "</td> </tr>"
+   'WebBrowser.Navigate App.Path & "\rep.html"
+   fs.WriteLine "    </table><br>"
+   PrintEndofReport fs
+   fs.WriteLine "    </body>"
+   fs.WriteLine "    <html>"
+  If boolSaveAsExcel = True Then
+  WebBrowser.Navigate "C:\PCIS-Reports\" & filpat
+  Else
+   WebBrowser.Navigate App.Path & "\rep.html"
+ End If
+'End With
+End Function
+Private Sub PrintEndofReport(fs As Object)
+   fs.WriteLine "    <table border=1 class=TableFont cellspacing=0 BORDERCOLOR=gray width=95%>"
+
+Dim f As Integer
+f = 0
+fs.WriteLine "           <br></br> <td ><b>JobNo. Selected</td>"
+For f = 0 To List1.ListCount - 1
+If List1.Selected(f) = True Then
+hh = Split(List1.List(f), "  -  ", Len(List1.List(f)), vbTextCompare)
+fs.WriteLine "        <tr bgcolor=white  class=TableFont>"
+fs.WriteLine "            <td > " & List1.List(f) & "</td></tr>"
+End If
+Next f
+ Dim r As Integer
+r = 0
+fs.WriteLine "            <td > <b>JobCharges Selected</td>"
+For r = 0 To List2.ListCount - 1
+If List2.Selected(r) = True Then
+hh = Split(List2.List(r), "  -  ", Len(List2.List(r)), vbTextCompare)
+ fs.WriteLine "        <tr bgcolor=white  class=TableFont>"
+fs.WriteLine "            <td > " & List2.List(r) & "</td></tr>"
+End If
+Next r
+ 
+fs.WriteLine " </table>"
+
+End Sub
+Private Sub cbo_year_Change()
+lst_prj.Clear
+Dim f As Integer
+f = 0
+Dim pr As New ADODB.Recordset
+If pr.State Then pr.Close
+pr.Open "select DISTINCT(rd.dresc_proj),p.proj_desc  from resourcedetails rd,projectmaster p,userproject u where rd.dresc_proj=p.proj_key and p.proj_key=u.project and rd.dresc_year='" & cbo_year.Text & "' and u.username ='" & main.Label2.Caption & "'  order by rd.dresc_proj", Cn, 3, 2
+While Not pr.EOF
+lst_prj.AddItem pr(0) & "  -  " & pr(1)
+pr.MoveNext
+Wend
+pr.Close
+End Sub
+
+Private Sub cbo_year_Click()
+lst_prj.Clear
+Dim f As Integer
+f = 0
+Dim pr As New ADODB.Recordset
+If pr.State Then pr.Close
+pr.Open "select DISTINCT(rd.dresc_proj),p.proj_desc  from resourcedetails rd,projectmaster p,userproject u where rd.dresc_proj=p.proj_key and p.proj_key=u.project and rd.dresc_year='" & cbo_year.Text & "' and u.username ='" & main.Label2.Caption & "'  order by rd.dresc_proj", Cn, 3, 2
+While Not pr.EOF
+lst_prj.AddItem pr(0) & "  -  " & pr(1)
+pr.MoveNext
+Wend
+pr.Close
+End Sub
+Private Sub cmd_clear_Click()
+Dim Slsc As Double
+Slsc = 0
+For Slsc = 0 To lst_resc.ListCount - 1
+lst_resc.Selected(Slsc) = False
+Next Slsc
+End Sub
+Private Sub Check1_Click()
+Dim a As Integer
+If Check1.Value = 1 Then
+
+
+a = 0
+For a = 0 To lst_prj.ListCount - 1
+lst_prj.Selected(a) = True
+Next a
+lst_prj.Enabled = False
+
+Else
+a = 0
+For a = 0 To lst_prj.ListCount - 1
+lst_prj.Selected(a) = False
+Next a
+lst_prj.Enabled = True
+
+End If
+End Sub
+
+Private Sub cmd_apply_Click()
+Dim st As String
+st = Format(Date, "dd-MMM-yyyy")
+filpat = "Estimated_vs_Billed by Resource" & "-" & txt_name.Text & "-" & st & ".xls"
+ms = MsgBox("Do you want to save the report with the name  " & filpat, vbYesNo)
+If ms = vbYes Then
+Call WriteByResource(True)
+frmExportToExcel.Visible = False
+Else
+frmExportToExcel.Visible = False
+End If
+End Sub
+
+
+Private Sub cmd_close_Click()
+Unload Me
+End Sub
+
+Private Sub cmd_print_Click()
+On Error GoTo XIT
+WebBrowser.ExecWB 6, OLECMDEXECOPT_DODEFAULT
+XIT:
+End Sub
+
+Private Sub cmd_search_Click()
+Dim Sls As Double
+Sls = 0
+For Sls = 0 To lst_resc.ListCount - 1
+If InStr(lst_resc.List(Sls), txt_search.Text) Then
+lst_resc.Selected(Sls) = True
+End If
+Next Sls
+End Sub
+
+Private Sub command2_Click()
+frmBusy.Show
+SetParent frmBusy.hwnd, report_eicresource.hwnd
+frmBusy.lblBusyString = "Please Wait Report Under Process......"
+'Call flex_dataallreport
+Unload frmBusy
+
+End Sub
+
+Public Sub RPTHEADING(fs As Object)
+fs.WriteLine "    <table border=1 cellspacing=0 BORDERCOLOR=gray width=95%>"
+fs.WriteLine "        <tr bgcolor=black  height=20 class=TableFont>"
+                fs.WriteLine "            <td colspan=14><font color=white><b>" & GetCompanyName & "</td>"
+                fs.WriteLine "        </tr>"
+                
+                fs.WriteLine "        <tr bgcolor=black  height=20 class=TableFont>"
+                
+                fs.WriteLine "            <td colspan=7><font color=white><b>EIC BY RESOURCE</td>"
+                fs.WriteLine "           <td colspan=4><font color=white><b>PrintDate</td>"
+                fs.WriteLine "           <td colspan=3><font color=white>" & Format(Date, "dd/MM/yyyy") & "</td>"
+                fs.WriteLine "        </tr>"
+                fs.WriteLine "        <tr bgcolor=black  height=15 class=TableFont>"
+                fs.WriteLine "            <td Nowrap><font color=white>StartDate</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>EndDate</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>Duration (Days)</td>"
+                fs.WriteLine "            <td Nowrap ><font color=white>Jobcharge</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>Qty</td>"
+                fs.WriteLine "            <td Nowrap ><font color=white>Curr</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>UnitRate</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>UOM</td>"
+                fs.WriteLine "            <td Nowrap ><font color=white>Xchg</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>Total Cost(RM)</td>"
+                fs.WriteLine "            <td Nowrap ><font color=white>Spread</td>"
+                fs.WriteLine "            <td Nowrap ><font color=white>Type</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>CostCode</td>"
+                fs.WriteLine "            <td Nowrap><font color=white>Notes</td>"
+                fs.WriteLine "        </tr>"
+    
+End Sub
+
+Private Sub Form_Load()
+main.lbltitle.Caption = "Report - Estimated vs Billed BY JOBCHARGE"
+Me.Top = 10
+Me.Left = 10
+WebBrowser.Navigate "About:Blank"
+Dim pk As New ADODB.Recordset
+If pk.State Then pk.Close
+pk.Open "select DISTINCT(p.proj_key),p.proj_title from projectmaster p,userproject u where p.proj_key=u.project and u.username='" & main.Label2.Caption & "' order by p.proj_key", Cn, 3, 2
+While Not pk.EOF
+cbo_proj.AddItem pk(0) & "  -  " & pk(1)
+pk.MoveNext
+Wend
+pk.Close
+ 
+hgg = 0
+For hgg = 0 To List2.ListCount - 1
+List2.Selected(hgg) = False
+Next hgg
+hgg = 0
+For hgg = 0 To List1.ListCount - 1
+List1.Selected(hgg) = False
+Next hgg
+            Option1.Value = False
+            Option2.Value = True
+            Option3.Value = True
+            Option4.Value = False
+DTPicker1.Value = main.DTPcutdate1.Value
+Me.Width = 11415
+Me.Height = 9750
+End Sub
+Private Sub List2_Click()
+List1.Clear
+ 
+nn = Split(cbo_proj.Text, "  -  ", Len(cbo_proj.Text), vbTextCompare)
+Dim h As Integer
+h = 0
+For h = 0 To List2.ListCount - 1
+If List2.Selected(h) = True Then
+ju = Split(List2.List(h), "  -  ", Len(List2.List(h)), vbTextCompare)
+            Dim rc As New ADODB.Recordset
+            If rc.State Then rc.Close
+            rc.Open "select DISTINCT(c.bd_jobcharge),j.job_desc from cost c, jobcharge j where c.bd_jobcharge=j.job_code and c.bd_projectkey = '" & nn(0) & "' and j.jobno='" & ju(0) & "'  order by c.bd_jobcharge", Cn, 3, 2
+            While Not rc.EOF
+            List1.AddItem rc(0) & "  -  " & rc(1)
+            rc.MoveNext
+            Wend
+            rc.Close
+ End If
+ Next h
+End Sub
+'
+'Private Sub Option1_Click()
+'Option3.Value = 0
+'Option4.Value = 0
+'                hgg = 0
+'                For hgg = 0 To List1.ListCount - 1
+'                List1.Selected(hgg) = False
+'                Next hgg
+'If Option1.Value = True Then
+'Dim f As Integer
+'f = 0
+'For f = 0 To List2.ListCount - 1
+'List2.Selected(f) = True
+'Next f
+'
+'End If
+'
+'End Sub
+
+'Private Sub Option2_Click()
+'Option3.Value = 0
+'Option4.Value = 0
+'                    hgg = 0
+'                    For hgg = 0 To List1.ListCount - 1
+'                    List1.Selected(hgg) = False
+'                    Next hgg
+'If Option2.Value = True Then
+'Dim g As Integer
+'g = 0
+'For g = 0 To List2.ListCount - 1
+'List2.Selected(g) = False
+'Next g
+'
+'End If
+'
+'End Sub
+
+Private Sub cboResource_Click()
+spp = Split(cboResource.Text, "  -  ", Len(cboResource.Text), vbTextCompare)
+List2.Clear
+lstProjects.Clear
+Dim lst As String
+Dim rs1 As New ADODB.Recordset
+If rs1.State Then rs1.Close
+rs1.Open "select DISTINCT(jobno_code),jobno_desc from jobno where job_key='" & spp(0) & "' order by jobno_code", Cn, 3, 2
+While Not rs1.EOF
+List2.AddItem rs1(0) & "  -  " & rs1(1)
+rs1.MoveNext
+Wend
+rs1.Close
+            Dim rc As New ADODB.Recordset
+            'If rc.State Then rc.Close
+            'rc.Open "select DISTINCT(bd_resccode) from cost c, jobcharge j where c.bd_jobcharge=j.job_code  and  bd_costtype='E' order by c.bd_resccode", Cn, 3, 2
+            'While Not rc.EOF
+            Dim rcd As New ADODB.Recordset
+            If rcd.State Then rcd.Close
+            'rcd.Open "select DISTINCT(resc_desc) from resourcemaster where resc_code='" & rc(0) & "' ", Cn, 3, 2
+            rcd.Open "select distinct(bd_projectkey), bd_projectdesc from cost where bd_resccode = '" & spp(0) & "' and bd_projectkey in (select DISTINCT(p.proj_key) from projectmaster p,userproject u where p.proj_key=u.project and u.username='" & main.Label2.Caption & "')", Cn, 3, 2
+                   While Not rcd.EOF
+                   lstProjects.AddItem rcd(0) & "  -  " & rcd(1)
+            rcd.MoveNext
+            Wend
+            rcd.Close
+
+  
+Check1.Value = 1
+Check2.Value = 1
+Check3.Value = 1
+
+
+            hgg = 0
+            For hgg = 0 To List2.ListCount - 1
+            List2.Selected(hgg) = False
+            Next hgg
+            hgg = 0
+            For hgg = 0 To lstProjects.ListCount - 1
+            lstProjects.Selected(hgg) = False
+            Next hgg
+            Option1.Value = 0
+            Option2.Value = 0
+            Option3.Value = 0
+            Option4.Value = 0
+End Sub
+
+
+
+Private Sub cmd_show_Click()
+'frmBusy.Show
+'SetParent frmBusy.HWnd, rpt_incurredbyresource.HWnd
+'frmBusy.lblBusyString = "Please Wait Report Under Process......"
+If chkSaveAsExcel.Value Then
+frmExportToExcel.Visible = True
+Else
+Call WriteByResource(False)
+End If
+'Unload frmBusy
+End Sub
+ 
+Private Sub Form_Unload(Cancel As Integer)
+main.lbltitle.Caption = ""
+End Sub
+
+Private Sub Option1_Click()
+Option3.Value = 0
+Option4.Value = 0
+hgg = 0
+            For hgg = 0 To List2.ListCount - 1
+            List2.Selected(hgg) = False
+            Next hgg
+If Option1.Value = True Then
+Dim f As Integer
+f = 0
+For f = 0 To List2.ListCount - 1
+List2.Selected(f) = True
+Next f
+End If
+End Sub
+
+Private Sub Option2_Click()
+Option3.Value = 0
+Option4.Value = 0
+hgg = 0
+            For hgg = 0 To lstProjects.ListCount - 1
+            lstProjects.Selected(hgg) = False
+            Next hgg
+If Option2.Value = True Then
+Dim g As Integer
+g = 0
+For g = 0 To List2.ListCount - 1
+List2.Selected(g) = False
+Next g
+End If
+End Sub
+Private Sub Option3_Click()
+If Option3.Value = True Then
+Dim g As Integer
+g = 0
+For g = 0 To List1.ListCount - 1
+List1.Selected(g) = False
+Next g
+End If
+End Sub
+Private Sub Option4_Click()
+If Option4.Value = True Then
+Dim f As Integer
+f = 0
+For f = 0 To List1.ListCount - 1
+List1.Selected(f) = True
+Next f
+End If
+End Sub

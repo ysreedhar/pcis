@@ -1,0 +1,30 @@
+
+
+
+select * from jobcharge
+where jobno = '94701'
+
+
+update jobcharge set job_proj_key = '947Y07'
+where jobno = '94701'
+
+
+select * from cost where bd_jobcharge like '935xxa%'
+
+
+select replace(bd_jobcharge,'93594','94794')
+from cost
+where 
+bd_jobcharge like '93594%' 
+
+
+select * from cost 
+where bd_jobcharge like '93520%' 
+
+update cost
+set bd_jobcharge = replace(bd_jobcharge,'93520','94702')
+where 
+bd_jobcharge like '93520%'
+
+
+select * from cost where bd_projectkey = '935Y07'

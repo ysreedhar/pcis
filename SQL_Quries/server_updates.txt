@@ -1,0 +1,16 @@
+select PROJ_KEY,pm.proj_desc,   bd_projectkey, bd_projectdesc from cost, projectmaster pm
+where 
+PM.proj_desc <> bd_projectdesc
+AND 
+bd_projectKEY = pm.PROJ_KEY
+AND BD_YEAR = '2007'
+
+
+UPDATE COST	
+SET bd_projectdesc =	
+( SELECT proj_desc FROM projectmaster WHERE Projectmaster.proj_key = cost.bd_projectkey and cost.BD_YEAR = '2007')
+
+WHERE EXISTS
+  (Projectmaster.proj_desc <> cost.bd_projectdesc
+AND cost.bd_projectKEY = projectmaster.PROJ_KEY AND cost.BD_YEAR = '2007');
+
